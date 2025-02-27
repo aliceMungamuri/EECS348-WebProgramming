@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Updater</title>
+    <script>
+        function changeStyle() {
+            let color = document.getElementById("color").value;
+            let border = document.getElementById("border").value;
+            let para = document.getElementById("text");
+            para.style.color = color;
+            para.style.borderWidth = border + "px";
+            para.style.borderStyle = "solid";
+        }
+    </script>
+</head>
+<body>
+    <p id="text" style="border: 2px solid black;">This is a sample paragraph.</p>
+    <input type="text" id="color" placeholder="Enter color (e.g., red)">
+    <input type="number" id="border" placeholder="Border width">
+    <button onclick="changeStyle()">Apply</button>
+</body>
+</html>
